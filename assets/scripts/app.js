@@ -17,13 +17,13 @@ function writeToLog(
     operationNumber, 
     newResult
     ){
-        const logEntry = {
+        const logEntry = {  //object
             operation: operationIdentifier,
             prevResult: prevResult,
             number: operationNumber,
             result: newResult
         };
-        logEntries.push(logEntry);
+        logEntries.push(logEntry);  //array
         console.log(logEntries);
     }
     
