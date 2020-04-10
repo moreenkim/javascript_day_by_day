@@ -235,7 +235,11 @@ function printLogHandler(){
     // for(i = 10; i > 0; i--){
     //     console.log(i);
     // }
-    console.log(battleLog);
+    // 
+    for(const logEntry of battleLog){   //for of loop
+        console.log(logEntry);
+    }
+    // console.log(battleLog);
 }
 attackBtn.addEventListener('click', attackHandler);
 strongAttackBtn.addEventListener('click', strongAttackHandler);
