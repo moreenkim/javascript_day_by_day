@@ -235,9 +235,13 @@ function printLogHandler(){
     // for(i = 10; i > 0; i--){
     //     console.log(i);
     // }
-    // 
+    let i = 0;
     for(const logEntry of battleLog){   //for of loop
-        console.log(logEntry);
+        console.log(`#${i}`);
+        for (const key in logEntry) { //for in loop
+            console.log(`${key} => ${logEntry[key]}`);
+        }
+        i++;
     }
     // console.log(battleLog);
 }
