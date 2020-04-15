@@ -4,13 +4,13 @@ function startGame() {
  console.log('game is starting...');
 }
 
-const person = {                  //function in an object or METHOD
-    greet: function person() {
-        console.log('hi there!!')
-    }
-};
+// const person = {                  //function in an object or METHOD
+//     greet: function person() {
+//         console.log('hi there!!')
+//     }
+// };
+// person.greet();
 
-person.greet();
-
+console.dir(typeof startGame);
 
 startGameBtn.addEventListener('click', startGame);
