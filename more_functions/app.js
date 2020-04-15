@@ -92,7 +92,10 @@ startGameBtn.addEventListener('click', () => {
 });
 
 
-/*const sumUp = (...numbers) => {   REST OPERATOR ...
+const sumUp = (...numbers) => { //REST OPERATOR (...)
+    const validation = (number) => {  //function inside of a function
+       
+    } ;
   let sum = 0;
   for (const num of numbers) {
       sum += num;
@@ -101,4 +104,4 @@ startGameBtn.addEventListener('click', () => {
 };
 
 console.log(sumUp(1, 2, 10, 20, -8));
-console.log(sumUp(1, 5, 13, -3, 6, 10, 25, 88));*/
+console.log(sumUp(1, 5, 13, -3, 6, 10, 25, 88));
