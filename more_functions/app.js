@@ -91,17 +91,30 @@ startGameBtn.addEventListener('click', () => {
     gameIsRunning = false;
 });
 
+//non game related code.
 
-const sumUp = (...numbers) => { //REST OPERATOR (...)
+const sumUp = (resultHandler, ...numbers) => { //REST OPERATOR (...)
     const validation = (number) => {  //function inside of a function
-       
+       return isNaN(number) ? 0 : number;
     } ;
   let sum = 0;
   for (const num of numbers) {
-      sum += num;
+      sum += validation(num);
   }
-  return sum;
+  resultHandler(sum);  //callback
 };
 
-console.log(sumUp(1, 2, 10, 20, -8));
-console.log(sumUp(1, 5, 13, -3, 6, 10, 25, 88));
+const subtractUp = function(resultHandler) {
+   let sum = 0;
+   for (const num of arguments) {
+     sum -=num;
+   }
+   resultHandler(sum);
+};
+
+const showResult = (result) => {
+    alert('result is:' + result);
+};
+sumUp(showResult, 1, 2, 10, 20, -8);
+sumUp(showResult, 1, 5, 13, -3, 6, 10, 25, 88);
+subtractUp(showResult, 1, 10, 15, 20);
