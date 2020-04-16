@@ -104,9 +104,9 @@ const sumUp = (resultHandler, ...numbers) => { //REST OPERATOR (...)
   resultHandler(sum);  //callback
 };
 
-const subtractUp = function(resultHandler) {
+const subtractUp = function(resultHandler, ...numbers) {
    let sum = 0;
-   for (const num of arguments) {
+   for (const num of numbers) {
      sum -=num;
    }
    resultHandler(sum);
