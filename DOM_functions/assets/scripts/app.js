@@ -7,8 +7,13 @@ const cancelAddMovieButton = addMovieModal.querySelector('.btn--passive');
 const addMovieButton = document.querySelector('.btn--success');
 const userInputs = addMovieModal.querySelectorAll('input');
 //const userInputs = addMovieModal.getElementsByTagName('input');
+const entryTextSection = document.getElementById('entry-text');
 
 const movies = [];
+
+const UpdateUI = () => {
+
+};
 
 const toggleBackdrop = () => {
     backdrop.classList.toggle('visible');
@@ -32,6 +37,7 @@ const cancelAddMovieHandler = () => {
 };
 
 const addMovieHandler = () => {
+    debugger;
     const titleValue = userInputs[0].value;
     const imageUrlValue = userInputs[1].value;
     const ratingValue = userInputs[2].value;
