@@ -53,6 +53,7 @@ testResults.push(7);
 console.log(storedResults, testResults);
 console.log(testResults.indexOf(5.2));
 //console.log(testResults.lastIndexOf(5.2));  //start searching from the right of the array
+console.log(testResults.includes(5.2));
 
 const personData = [{name:'max'}, {name:'manuel'}];
 console.log(personData.indexOf({name:'max'}));
