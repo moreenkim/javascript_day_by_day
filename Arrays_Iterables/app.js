@@ -28,19 +28,24 @@ for(const data of analytics) {
     }
 }*/
 
+// const hobbies = ['cooking', 'sports'];
+// hobbies.push('reading'); //.push adds elements at END of the array
+// hobbies.unshift('coding'); //.unshift addselements at BEGINNING of an array
+// hobbies.pop(); //.pop removes element at END of array
+// hobbies.shift(); //remove element at BEGINNING of array  
+// console.log(hobbies);
 
-const hobbies = ['cooking', 'sports'];
-hobbies.push('reading'); //.push adds elements at END of the array
-hobbies.unshift('coding'); //.unshift addselements at BEGINNING of an array
-hobbies.pop(); //.pop removes element at END of array
-hobbies.shift(); //remove element at BEGINNING of array  
-console.log(hobbies);
+// hobbies[1] = 'CODING' //change elements using index access
+// console.log(hobbies);
 
-hobbies[1] = 'CODING' //change elements using index access
-console.log(hobbies);
+// hobbies.splice(1, 0, 'good food'); //add element between elements in array
+// console.log(hobbies);
 
-hobbies.splice(1, 0, 'good food'); //add element between elements in array
-console.log(hobbies);
+// hobbies.splice(0, 1); //remove element from array
+// console.log(hobbies);
 
-hobbies.splice(0, 1);
-console.log(hobbies);
+const testResults = [1, 5.2, -6.2, 10, 15];
+const storedResults = testResults.slice();
+
+testResults.push(7);
+console.log(storedResults, testResults);
