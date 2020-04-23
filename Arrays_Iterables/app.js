@@ -45,7 +45,7 @@ for(const data of analytics) {
 // console.log(hobbies);
 
 const testResults = [1, 5.2, -6.2, 10, 15];
-const storedResults = testResults.slice();
-
+//const storedResults = testResults.slice(0, 2);
+const storedResults = testResults.concat([3.99, 2]);
 testResults.push(7);
 console.log(storedResults, testResults);
