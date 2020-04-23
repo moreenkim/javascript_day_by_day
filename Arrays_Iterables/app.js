@@ -152,14 +152,26 @@ for(const data of analytics) {
 
 
 
-//SETS AND MAPS
-const ids = new Set([1, 2, 3]);//sets
-ids.add(4); 
-if(ids.has(1)) {
-    ids.delete(1);
-};
-console.log(ids.has(1)); //been deleted
+//SETS AND 
+// const ids = new Set([1, 2, 3]);//sets
+// ids.add(4); 
+// if(ids.has(1)) {
+//     ids.delete(1);
+// };
+// console.log(ids.has(1)); //been deleted
 
-for (entry of ids.entries()){
+// for (entry of ids.entries()){
+//     console.log(entry)
+// }
+
+// MAPS
+const person1 = {name: 'max'};
+const person2 = {name:'namuel'};
+
+const personData = new Map([[person1, [{date: 'yesterday', price:10}]]]);
+console.log(personData);
+console.log(personData.get(person1));
+
+for( const entry of personData.entries()) {
     console.log(entry)
-}
+};
