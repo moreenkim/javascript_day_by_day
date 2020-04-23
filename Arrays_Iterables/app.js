@@ -68,16 +68,40 @@ for(const data of analytics) {
 // });
 // console.log(maxIndex);
 
+// const prices = [10.99, 5.99, 3.99, 6.59];
+// const tax = 0.19;
+// const taxAdjustedPrices = [];
+
+// // for(const price of prices){
+// //     taxAdjustedPrices.push(price * (1+tax));
+// // }
+
+// prices.forEach((price, idx, prices) => { //an alternative for for-of loops
+//     const priceObject = {index: idx, taxAdjustedPrice: price * (1+tax)}
+//     taxAdjustedPrices.push(priceObject);
+// })
+// console.log(taxAdjustedPrices);
+
+
 const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
-const taxAdjustedPrices = [];
 
-for(const price of prices){
-    taxAdjustedPrices.push(price * (1+tax));
-}
 
-prices.forEach((price, idx, prices) => {
+const taxAdjustedPrices = prices.map((price, idx, prices) => { //an alternative for for-of loops
     const priceObject = {index: idx, taxAdjustedPrice: price * (1+tax)}
-    taxAdjustedPrices.push(priceObject);
-})
-console.log(taxAdjustedPrices);
+    return priceObject;
+});
+//console.log(prices,taxAdjustedPrices);
+
+const sortedPrices = prices.sort((a, b) => { //.sort gets from lowest to highest
+    if (a > b){
+        return 1;
+    } else if (a === b){
+        return 0;
+    }else{
+        return -1;
+    }
+});
+//console.log(sortedPrices.reverse()); //gets from highest to lowest
+console.log(sortedPrices);
+  
