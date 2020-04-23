@@ -1,5 +1,5 @@
-const numbers = [1, 2, 3]; //most common way
-console.log(numbers);
+// const numbers = [1, 2, 3]; //most common way
+// console.log(numbers);
 
 // //const moreNumbers = new Array('hi', 'there'); // []
 // const moreNumbers = new Array(3);//will produce empty*3//(1, 5);
@@ -83,53 +83,83 @@ for(const data of analytics) {
 // console.log(taxAdjustedPrices);
 
 
-const prices = [10.99, 5.99, 3.99, 6.59];
-const tax = 0.19;
+// const prices = [10.99, 5.99, 3.99, 6.59];
+// const tax = 0.19;
 
 
-const taxAdjustedPrices = prices.map((price, idx, prices) => { //an alternative for for-of loops
-    const priceObject = {index: idx, taxAdjustedPrice: price * (1+tax)}
-    return priceObject;
-});
-//console.log(prices,taxAdjustedPrices);
+// const taxAdjustedPrices = prices.map((price, idx, prices) => { //an alternative for for-of loops
+//     const priceObject = {index: idx, taxAdjustedPrice: price * (1+tax)}
+//     return priceObject;
+// });
+// //console.log(prices,taxAdjustedPrices);
 
-const sortedPrices = prices.sort((a, b) => { //.sort gets from lowest to highest
-    if (a > b){
-        return 1;
-    } else if (a === b){
-        return 0;
-    }else{
-        return -1;
-    }
-});
-//console.log(sortedPrices.reverse()); //gets from highest to lowest
-console.log(sortedPrices);
+// const sortedPrices = prices.sort((a, b) => { //.sort gets from lowest to highest
+//     if (a > b){
+//         return 1;
+//     } else if (a === b){
+//         return 0;
+//     }else{
+//         return -1;
+//     }
+// });
+// //console.log(sortedPrices.reverse()); //gets from highest to lowest
+// console.log(sortedPrices);
 
-const filteredArray = prices.filter((price, idx, prices) => {
-     return price > 6;
-});
-console.log(filteredArray);
+// const filteredArray = prices.filter((price, idx, prices) => {
+//      return price > 6;
+// });
+// console.log(filteredArray);
   
 
-// // let sum = 0;
-// // prices.forEach((prices) => {
-// //     sum += prices
-// // });
+// // // let sum = 0;
+// // // prices.forEach((prices) => {
+// // //     sum += prices
+// // // });
+
+// // console.log(sum);
+
+// const sum = prices.reduce((prev, curr, curidx, prices) => {
+//     return prev + curr;
+// }, 0);
 
 // console.log(sum);
 
-const sum = prices.reduce((prev, curr, curidx, prices) => {
-    return prev + curr;
-}, 0);
+// const data = 'newyork;10.99;2000';
 
-console.log(sum);
+// const transformData = data.split(';');
 
-const data = 'newyork;10.99;2000';
+// console.log(transformData);
 
-const transformData = data.split(';');
+// const nameFragments = ['max', 'trainer'];
+// const name = nameFragments.join(' ');
+// console.log(name);
 
-console.log(transformData);
 
-const nameFrsgments = ['max', 'trainer'];
-const name = nameFrsgments.join(' ');
-console.log(name);
+//  const copiedNameFragments = [...nameFragments]; ...spread operator
+//  nameFragments.push('mr');
+//  console.log(copiedNameFragments, nameFragments); 
+
+//  console.log(Math.min(...prices)) //... extracts values in an array
+
+
+// const nameData = ['max', 'trainer', 'mr'];
+// // const firstName = nameData[0];
+// // const lastName = nameData[1];
+
+// const [ firstName, lastName, ...otherInfo ] = nameData;//...rest operatori.e mr
+// console.log(firstName, lastName, otherInfo);
+
+
+
+
+//SETS AND MAPS
+const ids = new Set([1, 2, 3]);//sets
+ids.add(4); 
+if(ids.has(1)) {
+    ids.delete(1);
+};
+console.log(ids.has(1)); //been deleted
+
+for (entry of ids.entries()){
+    console.log(entry)
+}
