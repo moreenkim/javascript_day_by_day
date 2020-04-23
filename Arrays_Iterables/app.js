@@ -123,3 +123,13 @@ const sum = prices.reduce((prev, curr, curidx, prices) => {
 }, 0);
 
 console.log(sum);
+
+const data = 'newyork;10.99;2000';
+
+const transformData = data.split(';');
+
+console.log(transformData);
+
+const nameFrsgments = ['max', 'trainer'];
+const name = nameFrsgments.join(' ');
+console.log(name);
