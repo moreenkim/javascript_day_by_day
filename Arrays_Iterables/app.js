@@ -47,5 +47,12 @@ for(const data of analytics) {
 const testResults = [1, 5.2, -6.2, 10, 15];
 //const storedResults = testResults.slice(0, 2);
 const storedResults = testResults.concat([3.99, 2]);
+
 testResults.push(7);
+
 console.log(storedResults, testResults);
+console.log(testResults.indexOf(5.2));
+//console.log(testResults.lastIndexOf(5.2));  //start searching from the right of the array
+
+const personData = [{name:'max'}, {name:'anna'}];
+console.log(personData.indexOf({name:'max'}));
