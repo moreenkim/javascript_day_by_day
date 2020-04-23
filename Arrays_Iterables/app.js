@@ -54,5 +54,15 @@ console.log(storedResults, testResults);
 console.log(testResults.indexOf(5.2));
 //console.log(testResults.lastIndexOf(5.2));  //start searching from the right of the array
 
-const personData = [{name:'max'}, {name:'anna'}];
+const personData = [{name:'max'}, {name:'manuel'}];
 console.log(personData.indexOf({name:'max'}));
+
+const manuel = personData.find((person, index, persons) => {
+    return person.name === 'manuel';
+});
+console.log(manuel);
+
+const maxIndex = personData.findIndex((person, index, persons) => {
+    return person.name === 'max';
+});
+console.log(maxIndex);
