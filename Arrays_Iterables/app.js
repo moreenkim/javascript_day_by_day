@@ -38,3 +38,9 @@ console.log(hobbies);
 
 hobbies[1] = 'CODING' //change elements using index access
 console.log(hobbies);
+
+hobbies.splice(1, 0, 'good food'); //add element between elements in array
+console.log(hobbies);
+
+hobbies.splice(0, 1);
+console.log(hobbies);
