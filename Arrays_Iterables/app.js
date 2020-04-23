@@ -110,3 +110,16 @@ const filteredArray = prices.filter((price, idx, prices) => {
 });
 console.log(filteredArray);
   
+
+// // let sum = 0;
+// // prices.forEach((prices) => {
+// //     sum += prices
+// // });
+
+// console.log(sum);
+
+const sum = prices.reduce((prev, curr, curidx, prices) => {
+    return prev + curr;
+}, 0);
+
+console.log(sum);
