@@ -11,5 +11,8 @@ console.log(numbers);
 const listItems = document.querySelectorAll('li');
 console.log(listItems);
 
+const listItemsArray = Array.from(listItems);
+console.log(listItemsArray);
+
 const moreNumbers = Array.from('hiii'); //convert iterable and array like to an array
 console.log(moreNumbers);
