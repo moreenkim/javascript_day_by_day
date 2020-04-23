@@ -8,7 +8,7 @@ console.log(numbers);
 // const yetMoreNumbers = Array.of(1, 2);
 // console.log(yetMoreNumbers);
 
-const listItems = document.querySelectorAll('li'); //will cr8 nodelist
+/*const listItems = document.querySelectorAll('li'); //will cr8 nodelist
 console.log(listItems);
 
 const listItemsArray = Array.from(listItems); //will cr8 real array
@@ -26,4 +26,15 @@ for(const data of analytics) {
     for(const datapoint of data) {
         console.log(datapoint);
     }
-}
+}*/
+
+
+const hobbies = ['cooking', 'sports'];
+hobbies.push('reading'); //.push adds elements at END of the array
+hobbies.unshift('coding'); //.unshift addselements at BEGINNING of an array
+hobbies.pop(); //.pop removes element at END of array
+hobbies.shift(); //remove element at BEGINNING of array  
+console.log(hobbies);
+
+hobbies[1] = 'CODING' //change elements using index access
+console.log(hobbies);
