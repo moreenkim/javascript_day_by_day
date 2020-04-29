@@ -26,7 +26,9 @@ const renderMovies = (filter = '') => {
     const { info, ...otherProps } = movie;
     console.log(otherProps);
     //debugger;
-    let text = info.title  + ' - ';  //let text = movie.info['title'] output key value in an object
+    //const {title: movieTitle } = info;
+    const {getFormattedTitle} = movie;
+    let text = movie.getFormattedTitle() + ' - ';  //let text = movie.info['title'] output key value in an object
     for (const key in info){
       if(key !==  'title') {
         text = text + `${key}: ${info[key]}`;
@@ -56,7 +58,11 @@ const addMovieHandler = () => {
         title:title,
         [extraName]: extraValue
       },
-      id: Math.random().toString()
+      id: Math.random().toString(),
+      getFormattedTitle: function() {
+        return this.info.title.toUpperCase();
+
+      }
     };
 
     movies.push(newMovie);
